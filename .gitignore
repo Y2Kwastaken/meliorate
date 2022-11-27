@@ -1,0 +1,5 @@
+/.apt_generated
+/.editorconfig
+/.vscode
+/dependency-reduced-pom.xml
+/target

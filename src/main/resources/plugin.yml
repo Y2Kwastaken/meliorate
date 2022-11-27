@@ -1,0 +1,7 @@
+name: Meliorate
+main: sh.miles.meliorate.v2.Meliorate
+version: 1.0
+api-version: 1.17
+description: A plugin that makes Minecraft better
+author: Miles
+commands:
