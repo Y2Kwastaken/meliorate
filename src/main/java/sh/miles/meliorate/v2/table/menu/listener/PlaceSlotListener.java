@@ -48,7 +48,13 @@ public class PlaceSlotListener implements ButtonAction {
             if (e.getClick() == ClickType.RIGHT && clicked.getAmount() > 1) {
                 return;
             }
+
             TaskBuilder.of(TaskType.DELAY, () -> {
+                final ItemStack updatedClickedSlot = e.getClickedInventory().getItem(e.getSlot());
+                if (e.getClick() == ClickType.LEFT && updatedClickedSlot != null) {
+                    return;
+                }
+
                 if (e.getSlot() == 11) {
                     e.getInventory().setItem(11, toolPlaceHolder);
                 } else {

@@ -11,6 +11,7 @@ import sh.miles.meliorate.v2.dispatcher.ItemHeldDispatcher;
 import sh.miles.meliorate.v2.dispatcher.ItemPickupDispathcer;
 import sh.miles.meliorate.v2.modifier.modifiers.Modifiers;
 import sh.miles.meliorate.v2.table.UpgradeTable;
+import sh.miles.meliorate.v2.table.listener.UpgradeTableGravityListener;
 import sh.miles.meliorate.v2.table.listener.UpgradeTableInteractListener;
 import sh.miles.meliorate.v2.table.listener.UpgradeTablePlaceListener;
 
@@ -39,6 +40,7 @@ public class Meliorate extends JavaPlugin {
 
         // table listeners
         getServer().getPluginManager().registerEvents(new MenuListener(), this);
+        getServer().getPluginManager().registerEvents(new UpgradeTableGravityListener(), this);
         getServer().getPluginManager().registerEvents(new UpgradeTablePlaceListener(), this);
         getServer().getPluginManager().registerEvents(new UpgradeTableInteractListener(), this);
     }
