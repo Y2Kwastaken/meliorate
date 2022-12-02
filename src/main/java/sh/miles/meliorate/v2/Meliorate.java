@@ -1,8 +1,10 @@
 package sh.miles.meliorate.v2;
 
+import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import lombok.Getter;
+import sh.miles.megumi.item.material.MaterialTranslator;
 import sh.miles.megumi.menu.listener.MenuListener;
 import sh.miles.meliorate.v2.dispatcher.BlockBreakDispatcher;
 import sh.miles.meliorate.v2.dispatcher.InventoryClickDispathcer;
@@ -19,6 +21,34 @@ public class Meliorate extends JavaPlugin {
 
     @Getter
     private static Meliorate instance;
+    public static final MaterialTranslator SMELT_TRANSLATOR;
+    static {
+        SMELT_TRANSLATOR = MaterialTranslator.fromArray(new Material[] {
+                Material.OAK_LOG, Material.CHARCOAL,
+                Material.ACACIA_LOG, Material.CHARCOAL,
+                Material.BIRCH_LOG, Material.CHARCOAL,
+                Material.DARK_OAK_LOG, Material.CHARCOAL,
+                Material.JUNGLE_LOG, Material.CHARCOAL,
+                Material.SPRUCE_LOG, Material.CHARCOAL,
+                Material.CRIMSON_STEM, Material.CHARCOAL,
+                Material.WARPED_STEM, Material.CHARCOAL,
+                Material.STRIPPED_OAK_LOG, Material.CHARCOAL,
+                Material.STRIPPED_ACACIA_LOG, Material.CHARCOAL,
+                Material.STRIPPED_BIRCH_LOG, Material.CHARCOAL,
+                Material.STRIPPED_DARK_OAK_LOG, Material.CHARCOAL,
+                Material.STRIPPED_JUNGLE_LOG, Material.CHARCOAL,
+                Material.STRIPPED_SPRUCE_LOG, Material.CHARCOAL,
+                Material.STRIPPED_CRIMSON_STEM, Material.CHARCOAL,
+                Material.STRIPPED_WARPED_STEM, Material.CHARCOAL,
+                Material.RAW_IRON, Material.IRON_INGOT,
+                Material.RAW_GOLD, Material.GOLD_INGOT,
+                Material.RAW_COPPER, Material.COPPER_INGOT,
+                Material.RAW_IRON_BLOCK, Material.IRON_BLOCK,
+                Material.RAW_GOLD_BLOCK, Material.GOLD_BLOCK,
+                Material.RAW_COPPER_BLOCK, Material.COPPER_BLOCK
+        });
+        SMELT_TRANSLATOR.lock();
+    }
 
     @Override
     public void onEnable() {

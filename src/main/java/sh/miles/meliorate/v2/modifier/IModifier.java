@@ -6,7 +6,7 @@ import org.bukkit.event.Event;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 
-import sh.miles.meliorate.v2.material.MaterialGroup;
+import sh.miles.megumi.item.material.MaterialGroup;
 
 public interface IModifier {
 
@@ -24,6 +24,7 @@ public interface IModifier {
 
     MaterialGroup getGroup();
 
+    @SuppressWarnings("all")
     Map<Class<? extends Event>, ModifierTrigger<? extends Event>> getTriggers();
 
 }

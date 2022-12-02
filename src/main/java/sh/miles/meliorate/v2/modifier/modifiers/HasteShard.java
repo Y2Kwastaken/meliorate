@@ -15,9 +15,9 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.potion.PotionEffectType;
 
 import sh.miles.megumi.chat.ChatUtil;
+import sh.miles.megumi.item.material.MaterialGroup;
 import sh.miles.meliorate.ItemBuilder;
 import sh.miles.meliorate.v2.Meliorate;
-import sh.miles.meliorate.v2.material.MaterialGroup;
 import sh.miles.meliorate.v2.modifier.IModifier;
 import sh.miles.meliorate.v2.modifier.ModifierTrigger;
 import sh.miles.meliorate.v2.modifier.modifiers.trigggers.EffectClickTrigger;

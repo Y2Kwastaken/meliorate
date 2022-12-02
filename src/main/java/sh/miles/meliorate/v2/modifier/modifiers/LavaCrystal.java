@@ -12,10 +12,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 
 import sh.miles.megumi.chat.ChatUtil;
+import sh.miles.megumi.item.material.MaterialGroup;
 import sh.miles.meliorate.ItemBuilder;
 import sh.miles.meliorate.v2.Meliorate;
-import sh.miles.meliorate.v2.material.MaterialGroup;
-import sh.miles.meliorate.v2.material.MaterialTranslations;
 import sh.miles.meliorate.v2.modifier.IModifier;
 import sh.miles.meliorate.v2.modifier.MeliorateModifier;
 import sh.miles.meliorate.v2.modifier.ModifierTrigger;
@@ -109,8 +108,8 @@ public class LavaCrystal implements IModifier {
             final ItemStack tool = e.getPlayer().getInventory().getItemInMainHand();
             Collection<ItemStack> drops = e.getBlock().getDrops(tool);
             drops.forEach(drop -> {
-                if (MaterialTranslations.SMELT_MAP.containsKey(drop.getType())) {
-                    drop.setType(MaterialTranslations.SMELT_MAP.get(drop.getType()));
+                if (Meliorate.SMELT_TRANSLATOR.hasKey(drop.getType())) {
+                    drop.setType(Meliorate.SMELT_TRANSLATOR.getKey(drop.getType()));
                 }
             });
             e.setDropItems(false);

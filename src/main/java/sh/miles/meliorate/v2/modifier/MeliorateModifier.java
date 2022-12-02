@@ -14,8 +14,8 @@ import org.bukkit.persistence.PersistentDataType;
 
 import lombok.Getter;
 import lombok.NonNull;
+import sh.miles.megumi.item.material.MaterialGroup;
 import sh.miles.meliorate.v2.Meliorate;
-import sh.miles.meliorate.v2.material.MaterialGroup;
 
 public class MeliorateModifier {
 
